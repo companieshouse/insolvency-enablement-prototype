@@ -20,5 +20,6 @@ Example usage:
 module.exports = {
 
   // Insert values here
-"signin-email": "user@testcompany.co.uk"
+"signin-email": "user@testcompany.co.uk",
+"which-company-to-close": "01234567"
 }

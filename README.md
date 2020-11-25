@@ -1,2 +1,2 @@
-# insolvency-enablement-prototype
+# insolvency-prototype
 Prototype for the insolvency enablement service

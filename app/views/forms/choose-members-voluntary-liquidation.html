@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Members voluntary liquidation - Insolvency Enablement - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="sign-in" method="get">
+
+
+      {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+          legend: {
+            text: "Members voluntary liquidation?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        items: [
+        {
+          value: "LIQ01",
+          text: "Give notice of statutory declaration of solvency",
+          hint: {
+            text: "Form LIQ01"
+          }
+        },
+        {
+          value: "LRSEP",
+          text: "Resolution for members voluntary liquidation",
+          hint: {
+            text: "Form LRESP"
+          }
+        },
+        {
+          value: "600CH",
+          text: "Notice of appointment of liquidator / voluntary winding up (members or creditors)",
+          hint: {
+            text: "Form 600CH"
+          }
+        },
+        {
+          value: "LIQ13",
+          text: "Notice of final account prior to dissolution in members voluntary liquidation",
+          hint: {
+            text: "Form LIQ13"
+          }
+        }
+      ]
+      }) }}
+
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+</form>
+    </div>
+  </div>
+{% endblock %}

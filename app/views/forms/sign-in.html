@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Sign in to Companies House - Insolvency Enablement - GOV.UK
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="choose-company" method="get">
+
+
+      <h1 class="govuk-heading-xl">Sign in to Companies House</h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="signin-email">
+          Email address
+
+        </label>
+        <input class="govuk-input  govuk-!-width-three-quarters" id="signin-email" name="signin-email" type="email" value="">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="signin-password">
+          Password
+
+        </label>
+        <input class="govuk-input  govuk-!-width-three-quarters" id="signin-password" name="password" type="password" value="">
+      </div>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+      text: "Sign in"
+    }) }}
+    </form>
+    <p>
+      <a href="javascript:void(0)">Register</a>
+    </p>
+    <p>
+      <a href="javascript:void(0)">Forgotten your password?</a>
+    </p>
+    </form>
+    </div>
+  </div>
+{% endblock %}

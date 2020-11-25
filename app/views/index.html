@@ -2,7 +2,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Shortcuts - Insolvency Enablement Prototype - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
 {% endblock %}
 
 {% block content %}
@@ -10,32 +14,41 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+        Insolvency Enablement Prototype
+        <span class="govuk-caption-xl">Version 1</span>
       </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+          <a href="start">Start page</a>
         </li>
         <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          <a href="/forms/choose-form-type">Choose form type</a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Members voluntary liquidation</h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/forms/choose-members-voluntary-liquidation">Choose form type (members voluntary liquidation)</a>
+        </li>
+        <li>
+          <a href="/forms/choose-company">Sign in to Companies House</a>
+        </li>
+        <li>
+          <a href="/forms/confirm-company">View company information</a>
+        <li>
+          <a href="/forms/LIQ01-1">Give notice of statutory declaration of solvency (LIQ01) - part 1</a>
+        </li>
+        <li>
+          <a href="/forms/LIQ01-2">Give notice of statutory declaration of solvency (LIQ01) - part 2</a>
+        </li>
+        <li>
+          <a href="/forms/check-your-answers">Check your answers</a>
+        </li>
+        <li>
+          <a href="/forms/confirmation">Application complete</a>
         </li>
       </ul>
     </div>

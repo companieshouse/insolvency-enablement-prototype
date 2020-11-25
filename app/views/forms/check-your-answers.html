@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Insolvency Enablement - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  {% include "includes/user-bar.html" %}
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Liquidator's forename(s)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Sarah Philips
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> forename(s)</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Liquidator's surname
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Davies
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> surname</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+              Liquidator's address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72 Guild Street
+            <br>London
+            <br>SE23 6FH
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Capacity in which the person is acting in relation to the company
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Curabitur lacinia ac ligula nec hendrerit. Duis egestas pulvinar risus, id placerat arcu fermentum eu. Praesent nec nulla mauris. Sed id turpis dui. Morbi viverra rutrum dolor id efficitur. Vivamus vulputate nec mi at tempus. Fusce lectus nisl, imperdiet vel lorem sed, vehicula varius velit. Duis tristique convallis justo, eu pharetra arcu tempus at. Integer sed orci lacus. Etiam at magna id purus blandit tristique in a enim.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> capacity in which the person is acting in relation to the company</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Declaration of solvency (file upload)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="javascript:void(0)">declaration25November-Final.pdf</a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> declaration of solvency</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Statement of assets and liabilities (file upload)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="javascript:void(0)">TEST-COMPANY-ASSETS-DOC.doc</a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> statement of assets and liabilities</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

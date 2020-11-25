@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Title here - Insolvency Enablement - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="choose-members-voluntary-Liquidation" method="get">
+
+
+
+
+      {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+          legend: {
+            text: "Question goes here?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        items: [
+          {
+            value: "MembersVoluntaryLiquidation",
+            text: "Members voluntary liquidation"
+          },
+          {
+            value: "CreditorsVoluntaryLiquidation",
+            text: "Creditors voluntary liquidation"
+          },
+          {
+            value: "AnyVoluntaryLiquidation",
+            text: "Any voluntary liquidation"
+          },
+          {
+            value: "ChangeYourRegisteredOffice",
+            text: "Change your registered office"
+          }
+        ]
+      }) }}
+
+
+      {{ govukButton({
+        text: "Continue"
+        }) }}
+  </form>
+
+    </div>
+  </div>
+{% endblock %}

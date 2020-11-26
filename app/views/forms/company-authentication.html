@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Company authentication
+{% endblock %}
+
+<!--service names are not currently shown on CH sign in or company authenticate-->
+{% set serviceName %}
+{% endset%}
+
+{% block content %}
+
+  <main id="content" role="main">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Company authentication</h1>
+        <form class="form" method="GET" action="LIQ01-1">
+          <p>To file company information you will need an authentication code.</p>
+          <p>Authenticating for
+            <br>
+            <span class="govuk-heading-m" id="company-details">A TEST COMPANY LIMITED</span>
+          </p>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+              Authentication code
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="authCode" name="authCode" type="password">
+          </div>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Authenticate"
+          }) }}
+          <p>
+            <a href="">Request an authentication code</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

@@ -36,3 +36,11 @@ ul#navigation {
     overflow-wrap: break-word;
   }
 }
+
+a.usability-link {
+  color: #b1b4b6;
+  float:right;
+  &:visited{
+  color: #b1b4b6;
+  }
+}

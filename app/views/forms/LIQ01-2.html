@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Give notice of statutory declaration of solvencyn - Insolvency Enablement - GOV.UK
+  Give notice of statutory declaration of insolvency - Insolvency Enablement - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-
 {{ govukBackLink({
     text: "Back",
     href: "javascript:history.back()"
@@ -19,54 +18,69 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="check-your-answers" method="get">
+      <form class="form" action="LIQ01-3" method="get">
 
-        <span class="govuk-caption-xl">Form LIQ01</span>
-        <h1 class="govuk-heading-xl">Give notice of statutory declaration of solvency</h1>
 
-        {{ govukTextarea({
-          name: "liq01capacity",
-          id: "liq01capacity",
-          label: {
-            text: "Capacity in which the person is acting in relation to the company",
-            classes: "govuk-label--l",
-            isPageHeading: false
-          },
-          hint: {
-            text: "Here's some hint text, if needed"
+
+
+        {% call govukFieldset({
+          legend: {
+            text: "What is the liquidator's address?",
+            classes: "govuk-fieldset__legend--xl",
+            isPageHeading: true
           }
-        }) }}
+        }) %}
 
+          {{ govukInput({
+            label: {
+              html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+            },
+            id: "address-line-1",
+            name: "address-line-1"
+          }) }}
 
-        <h2 class="govuk-heading-l">Attachments</h2>
-        <p class="govuk-hint">Some help text around attachments and file uploading, if needed</p>
+          {{ govukInput({
+            label: {
+              html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+            },
+            id: "address-line-2",
+            name: "address-line-2"
+          }) }}
 
-        {{ govukFileUpload({
-          id: "file-upload-1",
-          name: "file-upload-1",
-          label: {
-            text: "Declaration of solvency",
-            classes: "govuk-label--m"
-          }
-        }) }}
+          {{ govukInput({
+            label: {
+              text: "Town or city"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-town",
+            name: "address-town"
+          }) }}
 
+          {{ govukInput({
+            label: {
+              text: "County"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-county",
+            name: "address-county"
+          }) }}
 
-        {{ govukFileUpload({
-          id: "file-upload-1",
-          name: "file-upload-1",
-          label: {
-            text: "Statement of assets and liabilities",
-            classes: "govuk-label--m"
-          }
-        }) }}
+          {{ govukInput({
+            label: {
+              text: "Postcode"
+            },
+            classes: "govuk-input--width-10",
+            id: "address-postcode",
+            name: "address-postcode"
+          }) }}
 
-
+        {% endcall %}
 
       {{ govukButton({
         text: "Continue"
       }) }}
 
-      </form>
+</form>
     </div>
   </div>
 {% endblock %}

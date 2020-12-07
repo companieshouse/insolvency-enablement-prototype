@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Title here - Insolvency Enablement - GOV.UK
+  What type of form are you submitting?  - Insolvency Enablement - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,39 +15,115 @@
   }) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="choose-members-voluntary-liquidation" method="get">
+      <form class="form" action="CVL-task-list" method="get">
 
 
 
 
       {{ govukRadios({
-        idPrefix: "where-do-you-live",
-        name: "where-do-you-live",
+        idPrefix: "formType",
+        name: "formType",
         fieldset: {
           legend: {
-            text: "Question goes here?",
+            text: "What type of form are you submitting? ",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
         },
         items: [
-          {
-            value: "MembersVoluntaryLiquidation",
-            text: "Members voluntary liquidation"
-          },
-          {
-            value: "CreditorsVoluntaryLiquidation",
-            text: "Creditors voluntary liquidation"
-          },
-          {
-            value: "AnyVoluntaryLiquidation",
-            text: "Any voluntary liquidation"
-          },
-          {
-            value: "ChangeYourRegisteredOffice",
-            text: "Change your registered office"
+        {
+          value: "CVL",
+          text: "Creditors voluntary liquidation",
+          hint: {
+            html: "- Notice of statement of affairs (LIQ02)<br>- Notice of appointment of liquidator in members’ or creditors’ voluntary winding up (600)<br>- Extraordinary resolution to wind up (LRESEX)"
           }
-        ]
+        },
+        {
+          value: "MVL",
+          text: "Members voluntary liquidation",
+          hint: {
+            html: "- Notice of statutory declaration of solvency (LIQ01)<br>- Notice of appointment of liquidator in members’ or creditors’ voluntary winding up (600)<br>- Special resolution to wind up (LRESSP)"
+          }
+        },
+
+        {
+          value: "LIQ01",
+          text: "Notice of statutory declaration of solvency",
+          hint: {
+            text: "Form LIQ01"
+          }
+        },
+        {
+          value: "LIQ02",
+          text: "Notice of statement of affairs",
+          hint: {
+            text: "Form LIQ02"
+          }
+        },
+        {
+          value: "LIQ03",
+          text: "Notice of progress report in voluntarywinding up",
+          hint: {
+            text: "Form LIQ03"
+          }
+        },
+        {
+          value: "LIQ06",
+          text: "Notice of liquidator’s resignation in members voluntary liquidation or creditors voluntary liquidation",
+          hint: {
+            text: "Form LIQ06"
+          }
+        },
+        {
+          value: "LIQ10",
+          text: "Notice of removal of liquidator by court in members voluntary liquidation or creditors voluntary liquidation",
+          hint: {
+            text: "Form LIQ10"
+          }
+        },
+        {
+          value: "LIQ13",
+          text: "Notice of final account prior to dissolution in members voluntary liquidation",
+          hint: {
+            text: "Form LIQ13"
+          }
+        },
+        {
+          value: "LIQ14",
+          text: "Notice of final account prior to dissolution in creditors voluntary liquidation",
+          hint: {
+            text: "Form LIQ14"
+          }
+        },
+        {
+          value: "600",
+          text: "Notice of appointment of liquidator in members’ or creditors’ voluntary winding up",
+          hint: {
+            text: "Form 600"
+          }
+        },
+        {
+          value: "LRESEX",
+          text: "Extraordinary resolution to wind up",
+          hint: {
+            text: "Form LRESEX"
+          }
+        },
+        {
+          value: "LRESSP",
+          text: "Special resolution to wind up",
+          hint: {
+            text: "Form LRESSP"
+          }
+        },
+        {
+          value: "AD01",
+          text: "Change of address",
+          hint: {
+            text: "Form AD01"
+          }
+        }
+      ]
       }) }}
 
 

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Members voluntary liquidation - Insolvency Enablement - GOV.UK
+  Which form do you want to file? - Insolvency Enablement - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,11 +21,11 @@
 
 
       {{ govukRadios({
-        idPrefix: "where-do-you-live",
-        name: "where-do-you-live",
+        idPrefix: "whichTypeMVL",
+        name: "whichTypeMVL",
         fieldset: {
           legend: {
-            text: "Members voluntary liquidation?",
+            text: "Which form do you want to file?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }

@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Creditors voluntary liquidation - Insolvency Enablement - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Creditors voluntary liquidation
+      </h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Case incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 4 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Notice of Statement of Affairs <span class="govuk-hint">(Form LIQ02)</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="eligibility-status">
+                  Insolvency practitioner's name
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/forms/LIQ02-2-completed" aria-describedby="read-declaration-status">
+                  Insolvency practitioner's address
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Date of statement of affairs
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Statement of affairs by the liquidator under section 95(1A) of the Insolvency Act 1986
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not uploaded</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Statement of affairs by a director under section 99(1s) of the Insolvency Act 1986
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not uploaded</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Statement of concurrence
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not uploaded</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Extraordinary resolution to wind up <span class="govuk-hint">(form LRESEX)</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="company-information-status">
+                  Resolution details
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="contact-details-status">
+                  Date of resolution
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Notice of appointment of liquidator in members’ or creditors’ voluntary winding up <span class="govuk-hint">(form 600)</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="eligibility-status">
+                  Insolvency practitioner's name
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Insolvency practitioner's address
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="eligibility-status">
+                  Insolvency practitioner's email address or telephone number
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="read-declaration-status">
+                  Insolvency practitioner's number
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="contact-details-status">
+                  Date of statement of appointment
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="javascript:void(0)" aria-describedby="contact-details-status">
+                  Type of liquidation
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="contact-details-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Create case
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Create case and submit
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p><a href="CVL-task-list-completed" class="usability-link govuk-!-font-size-14">All completed</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What type of form are you submitting?  - Insolvency Enablement - GOV.UK
+  What are you submitting?  - Insolvency Enablement - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
         name: "formType",
         fieldset: {
           legend: {
-            text: "What type of form are you submitting? ",
+            text: "What are you submitting? ",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--xl"
           }
@@ -33,14 +33,14 @@
         items: [
         {
           value: "CVL",
-          text: "Creditors voluntary liquidation",
+          text: "Creditors' voluntary liquidation",
           hint: {
             html: "- Notice of statement of affairs (LIQ02)<br>- Notice of appointment of liquidator in members’ or creditors’ voluntary winding up (600)<br>- Extraordinary resolution to wind up (LRESEX)"
           }
         },
         {
           value: "MVL",
-          text: "Members voluntary liquidation",
+          text: "Members' voluntary liquidation",
           hint: {
             html: "- Notice of statutory declaration of solvency (LIQ01)<br>- Notice of appointment of liquidator in members’ or creditors’ voluntary winding up (600)<br>- Special resolution to wind up (LRESSP)"
           }
@@ -62,35 +62,35 @@
         },
         {
           value: "LIQ03",
-          text: "Notice of progress report in voluntarywinding up",
+          text: "Notice of progress report in voluntary winding up",
           hint: {
             text: "Form LIQ03"
           }
         },
         {
           value: "LIQ06",
-          text: "Notice of liquidator’s resignation in members voluntary liquidation or creditors voluntary liquidation",
+          text: "Notice of liquidator’s resignation in members' voluntary liquidation or creditors' voluntary liquidation",
           hint: {
             text: "Form LIQ06"
           }
         },
         {
           value: "LIQ10",
-          text: "Notice of removal of liquidator by court in members voluntary liquidation or creditors voluntary liquidation",
+          text: "Notice of removal of liquidator by court in members' voluntary liquidation or creditors' voluntary liquidation",
           hint: {
             text: "Form LIQ10"
           }
         },
         {
           value: "LIQ13",
-          text: "Notice of final account prior to dissolution in members voluntary liquidation",
+          text: "Notice of final account prior to dissolution in members' voluntary liquidation",
           hint: {
             text: "Form LIQ13"
           }
         },
         {
           value: "LIQ14",
-          text: "Notice of final account prior to dissolution in creditors voluntary liquidation",
+          text: "Notice of final account prior to dissolution in creditors' voluntary liquidation",
           hint: {
             text: "Form LIQ14"
           }

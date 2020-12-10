@@ -21,5 +21,5 @@ module.exports = {
 
   // Insert values here
 "signin-email": "user@testcompany.co.uk",
-"which-company-to-close": "01234567"
+"which-company": "01234567"
 }

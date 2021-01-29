@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Title - Apply for an insolvency practitioner's code - GOV.UK{% endblock %}
+  {% set serviceName %}
+    Apply for an insolvency practitioner's code
+  {% endset%}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Title goes here</h1>
+
+    <form action="check-your-answers" method="post" novalidate>
+
+      {{ govukInput({
+        label: {
+          text: "Applicant's name",
+          classes: "govuk-label--m"
+        },
+        hint: {
+          text: "For example, Jane Smith"
+        },
+        classes: "govuk-input--width-40",
+        id: "applicantName",
+        name: "applicantName"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "Company number",
+          classes: "govuk-label--m"
+        },
+        hint: {
+          text: "This is the 8 character reference issued by Companies House when the company was set up."
+        },
+        classes: "govuk-input--width-10",
+        id: "companyNumber",
+        name: "companyNumber",
+        type: "number"
+
+      }) }}
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with company number
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          You can find the company number by using the
+          <a href="http://beta.companieshouse.gov.uk/" target="_blank">
+            Companies House Service (opens in a new tab)</a>.
+        </div>
+      </details>
+
+      {% call govukFieldset({
+  legend: {
+    text: "Applicants's address",
+    classes: "govuk-fieldset__legend--m",
+    isPageHeading: true
+  }
+
+}) %}
+
+  {{ govukInput({
+    label: {
+      html: 'Building and street <span class="govuk-visually-hidden">line 1 of 2</span>'
+    },
+    id: "address-line-1",
+    name: "address-line-1",
+    autocomplete: "address-line1"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      html: '<span class="govuk-visually-hidden">Building and street line 2 of 2</span>'
+    },
+    id: "address-line-2",
+    name: "address-line-2",
+    autocomplete: "address-line2"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Town or city"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-town",
+    name: "address-town",
+    autocomplete: "address-level2"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "County"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "address-county",
+    name: "address-county"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Postcode"
+    },
+    classes: "govuk-input--width-10",
+    id: "address-postcode",
+    name: "address-postcode",
+    autocomplete: "postal-code"
+  }) }}
+
+{% endcall %}
+
+{{ govukInput({
+  label: {
+    text: "Applicant's phone number",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "I think we might need to explain why we need this?"
+  },
+  classes: "govuk-input--width-20",
+  id: "phoneNumber",
+  name: "phoneNumber",
+  type: "number"
+
+}) }}
+
+
+
+{{ govukInput({
+  label: {
+    text: "Applicant's email address",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "We need to explain why we need this, for GDPR I think"
+  },
+  classes: "govuk-input--width-40",
+  id: "applicantEmail",
+  name: "applicantEmail"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Insolvency practitioner number",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "Does this need a hint? For example, 12345678"
+  },
+  classes: "govuk-input--width-10",
+  id: "ipNumber",
+  name: "ipNumber",
+  type: "number"
+
+}) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

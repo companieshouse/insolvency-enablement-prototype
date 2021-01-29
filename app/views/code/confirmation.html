@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation - Insolvency Enablement - GOV.UK
+{% endblock %}
+{% set serviceName %}
+  Apply for an insolvency practitioner's code
+{% endset%}
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application submitted</h1>
+        <!--<div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>-->
+      </div>
+
+      <p>
+        We have sent a confirmation email to <span class="govuk-!-font-weight-bold">sphilips@example.co.uk</span>
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>Vivamus in ultricies est, id egestas quam. Duis pulvinar pharetra mollis. Pellentesque aliquam libero in interdum ultricies. Nam vel enim accumsan, consectetur enim sed, hendrerit nunc.</p>
+      <p><a href="javascript:void(0)">What did you think of this service?</a> (takes 30 seconds)</p>
+    </div>
+  </div>
+
+{% endblock %}

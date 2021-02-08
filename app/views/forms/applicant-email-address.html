@@ -20,7 +20,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="insolvency-practitioner-number" method="post">
+      <form action="insolvency-practitioner-number" method="post" novalidate>
 
     {{ govukInput({
       label: {
@@ -31,12 +31,12 @@
       hint: {
         text: "For example, janesmith@gmail.com"
       },
-      errorMessage: {
-        text: "Enter applicant's email address here"
-      },
-      id: "event-name",
-      name: "event-name"
-    }) }}
+      id: "email",
+      name: "email",
+      type: "email",
+      autocomplete: "email",
+      spellcheck: false
+      }) }}
 
         {{ govukButton({
 text: "Continue"

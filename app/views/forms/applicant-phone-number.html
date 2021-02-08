@@ -20,7 +20,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="applicant-email-address" method="post">
+      <form action="applicant-email-address" method="post" novalidate>
 
     {{ govukInput({
       label: {
@@ -31,11 +31,11 @@
       hint: {
         text: "For example, 07123456789"
       },
-      errorMessage: {
-        text: "Enter applicant's phone number here"
-      },
-      id: "event-name",
-      name: "event-name"
+      id: "telephone-number",
+      name: "telephone-number",
+      type: "tel",
+      autocomplete: "tel",
+      classes: "govuk-input--width-20"
     }) }}
 
         {{ govukButton({

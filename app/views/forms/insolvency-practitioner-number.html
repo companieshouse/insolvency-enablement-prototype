@@ -20,7 +20,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="check-your-answers" method="post">
+      <form action="check-your-answers" method="post" novalidate>
 
     {{ govukInput({
       label: {
@@ -31,11 +31,9 @@
       hint: {
         text: "For example, 12345678"
       },
-      errorMessage: {
-        text: "Enter insolvency practitioner number here"
-      },
-      id: "event-name",
-      name: "event-name"
+        id: "insolvency-practitioner-number",
+        name: "insolvency-practitioner-number",
+        spellcheck: false
     }) }}
 
         {{ govukButton({

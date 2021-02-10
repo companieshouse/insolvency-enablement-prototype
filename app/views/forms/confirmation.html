@@ -1,17 +1,31 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Confirmation - Insolvency Enablement - GOV.UK
-{% endblock %}
-
+  Title - Apply for an insolvency practitioner's code - GOV.UK{% endblock %}
+  {% set serviceName %}
+    Apply for an insolvency practitioner's code
+  {% endset%}
 {% block beforeContent %}
-  {% include "includes/phase-banner.html" %}
-  {% include "includes/user-bar.html" %}
+{% include "includes/phase-banner.html" %}
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+  <a class="govuk-back-link" href="check-your-insolvency-answers">Back</a>
 {% endblock %}
 
 {% block content %}
-
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
@@ -26,10 +40,9 @@
       </p>
 
       <h2 class="govuk-heading-m">What happens next</h2>
-      <p>Vivamus in ultricies est, id egestas quam. Duis pulvinar pharetra mollis. Pellentesque aliquam libero in interdum ultricies. Nam vel enim accumsan, consectetur enim sed, hendrerit nunc.</p>
-      <p><a href="javascript:void(0)">What did you think of this service?</a> (takes 30 seconds)</p>
-      <p><a href="/emails/application-received" class="govuk-!-font-size-14 govuk-!-margin-top-10 usability-link">Email</a></p>
+      <p>We will email you your insolvency practitioner’s code to <span class="govuk-!-font-weight-bold">{{ data['signin-email'] }}</span> within [time frame].</p>
+      <p>If you do not receive an email within [time frame], email <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>.</p>
+      <p><a href="javascript:void(0)">What did you think of this service?</a> (takes 2 minutes)</p>
     </div>
   </div>
-
 {% endblock %}

@@ -6,30 +6,38 @@
     Apply for an insolvency practitioner's code
   {% endset%}
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
-{% endblock %}
+{% include "includes/phase-banner.html" %}
 
-{% block backLink %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "/applicant-email-address"
-  }) }}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+  <a class="govuk-back-link" href="applicant-email-address">Back</a>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="check-your-answers" method="post" novalidate>
+      <form action="check-your-insolvency-answers" method="post" novalidate>
 
     {{ govukInput({
       label: {
-        text: "What is the insolvency practitioner number?",
+        text: "What is your insolvency practitioner number?",
         classes: "govuk-label--l",
         isPageHeading: true
       },
       hint: {
-        text: "For example, 12345678"
+        text: ""
       },
         id: "insolvency-practitioner-number",
         name: "insolvency-practitioner-number",

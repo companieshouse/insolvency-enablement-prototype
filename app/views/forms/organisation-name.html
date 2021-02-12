@@ -28,33 +28,20 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="confirm-the-company" method="post">
+      <form action="confirm-the-organisation" method="post">
 
     {{ govukInput({
       label: {
-        text: "What is your company number?",
+        text: "What is the name of your organisation?",
         classes: "govuk-label--l",
         isPageHeading: true
       },
       hint: {
-        text: "This the company number for the organisation that you work for."
+        text: "This the organisation that you work for."
       },
       id: "event-name",
       name: "event-name"
     }) }}
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with company number
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        You can find the company number by using the
-        <a href="http://beta.companieshouse.gov.uk/" target="_blank">
-          Companies House Service (opens in a new tab)</a>.
-      </div>
-    </details>
 
         {{ govukButton({
 text: "Continue"

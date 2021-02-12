@@ -1,3 +1,5 @@
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -21,7 +23,7 @@
       </li>
     </ol>
   </div>
-  <a class="govuk-back-link" href="applicant-name">Back</a>
+  <a class="govuk-back-link" href="organisation-name">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -60,16 +62,18 @@
         </tbody>
       </table>
 
-      {% from "govuk/components/button/macro.njk" import govukButton %}
+      <div class="govuk-button-group">
+        {{ govukButton({
+            text: "Choose a different organisation",
+            href: "organisation-name",
+            classes: "govuk-button--secondary"
+        }) }}
 
-      {{ govukButton({
-      text: "Confirm and continue",
-      href: "applicant-address"
-    }) }}
-
-      <p>
-        <a href="organisation-name">Choose a different organisation</a>
-      </p>
+        {{ govukButton({
+            text: "Confirm and continue",
+            href: "applicant-address"
+        }) }}
+      </div>
     </div>
   </div>
 {% endblock %}

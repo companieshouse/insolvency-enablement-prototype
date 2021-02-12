@@ -16,6 +16,7 @@
 
       <form action="check-your-insolvency-answers" method="post" novalidate>
 
+
     {{ govukInput({
       label: {
         text: "What is your insolvency practitioner (IP) number?",
@@ -25,9 +26,10 @@
       hint: {
         text: "This number is issued to you by the insolvency service and is 4 or 5 characters in length"
       },
-        id: "insolvency-practitioner-number",
-        name: "insolvency-practitioner-number",
-        spellcheck: false
+      classes: "govuk-input--width-5",
+      id: "insolvency-practitioner-number",
+      name: "insolvency-practitioner-number",
+      spellcheck: false
     }) }}
 
         {{ govukButton({

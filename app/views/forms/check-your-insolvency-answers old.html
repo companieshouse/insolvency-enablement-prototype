@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Apply for an insolvency practitioner's code - GOV.UK
+{% endblock %}
+{% set serviceName %}
+  Apply for an insolvency practitioner's code
+{% endset%}
+
+
+{% block content %}
+{{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sarah Philips
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> applicant's name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your company number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              23409877<br> (ACME LIMITED)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> company number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street
+              <br>London
+              <br>SE23 6FH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> applicant's address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>07700 900457</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> applicant's phone number</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Your email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['signin-email'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> applicant's email address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Insolvency practitioner number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>01234567</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="javascript:history.back()">
+                Change
+                <span class="govuk-visually-hidden"> insolvency practitioner number</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+
+        <form action="confirmation" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Accept and send
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  {% endblock %}

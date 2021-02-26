@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Title - Apply for an insolvency practitioner's code - GOV.UK{% endblock %}
+  {% set serviceName %}
+    Apply for an insolvency practitioner's code
+  {% endset%}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="insolvency-practitioner-number">Back</a>
+{% endblock %}
+
+{% block backLink %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/applicant-name"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="check-your-insolvency-answers" method="post" novalidate>
+
+    {{ govukInput({
+      label: {
+        text: "What is your insolvency practitioner number?",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      hint: {
+        text: ""
+      },
+        id: "insolvency-practitioner-number",
+        name: "insolvency-practitioner-number",
+        spellcheck: false
+    }) }}
+
+        {{ govukButton({
+text: "Continue"
+}) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
